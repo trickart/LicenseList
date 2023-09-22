@@ -97,6 +97,7 @@ final class SourcePackagesParser {
                                                           options: .zero)
             try data.write(to: saveURL, options: .atomic)
         } catch {
+            print(error)
             throw SPPError.couldNotExportLicenseList
         }
     }
